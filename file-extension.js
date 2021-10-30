@@ -12,7 +12,7 @@
 })(function() {
   return function fileExtension(filename, opts) {
     if (!opts) opts = {};
-    if (!filename) return "";
+    if (!filename) return null;
     var ext = (/[^./\\]*$/.exec(filename) || [""])[0];
     return opts.preserveCase ? ext : ext.toLowerCase();
   };
